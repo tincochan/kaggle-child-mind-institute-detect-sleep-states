@@ -162,3 +162,11 @@ cython_debug/
 data/
 processed_data/
 output/
+### Example user template template
+### Example user template
+
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
