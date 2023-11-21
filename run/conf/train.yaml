@@ -20,14 +20,14 @@ defaults:
 
 seed: 42
 exp_name: dummy
-batch_size: 32
-num_workers: 24
+batch_size: 6
+num_workers: 6
 duration: 5760 # duration * 5 = 秒数
 downsample_rate: 2
 upsample_rate: 1
 
 trainer:
-  epochs: 50
+  epochs: 85
   accelerator: auto
   use_amp: true
   debug: false
@@ -46,7 +46,7 @@ aug:
 # post_process
 pp:
   score_th: 0.02
-  distance: 10
+  distance: 8
 
 # label
 labels:
