@@ -21,20 +21,20 @@ defaults:
 seed: 42
 exp_name: dummy
 batch_size: 6
-num_workers: 6
+num_workers: 3
 duration: 5760 # duration * 5 = 秒数
 downsample_rate: 2
 upsample_rate: 1
 
 trainer:
-  epochs: 85
+  epochs: 150
   accelerator: auto
   use_amp: true
   debug: false
   gradient_clip_val: 1.0
   accumulate_grad_batches: 1
-  monitor: val_loss
-  monitor_mode: min
+  monitor: val_score
+  monitor_mode: max
   check_val_every_n_epoch: 1
 
 aug:
@@ -45,7 +45,7 @@ aug:
   
 # post_process
 pp:
-  score_th: 0.02
+  score_th: 0.01
   distance: 8
 
 # label
