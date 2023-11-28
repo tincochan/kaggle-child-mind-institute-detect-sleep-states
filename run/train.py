@@ -25,7 +25,7 @@ LOGGER = logging.getLogger(Path(__file__).name)
 @hydra.main(config_path="conf", config_name="train", version_base="1.2")
 def main(cfg: TrainConfig):
     seed_everything(cfg.seed)
-
+    torch.set_float32_matmul_precision('high')
     # init lightning model
     datamodule = SleepDataModule(cfg)
     LOGGER.info("Set Up DataModule")
