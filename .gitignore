@@ -3,6 +3,7 @@ __pycache__/
 *.py[cod]
 *$py.class
 model/
+deberta-v3-small/
 
 # C extensions
 *.so
