@@ -105,6 +105,7 @@ class SleepDataModule(LightningDataModule):
             num_workers=self.cfg.dataset.num_workers,
             pin_memory=True,
             drop_last=True,
+            persistent_workers=True
         )
         return train_loader
 
@@ -120,5 +121,6 @@ class SleepDataModule(LightningDataModule):
             shuffle=False,
             num_workers=self.cfg.dataset.num_workers,
             pin_memory=True,
+            persistent_workers=True
         )
         return valid_loader
