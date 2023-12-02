@@ -15,7 +15,7 @@ defaults:
   - dataset: seg
   - model: Spec2DCNN
   - feature_extractor: LSTMFeatureExtractor
-  - decoder: LSTMDecoder
+  - decoder: UNet1DDecoder
   - split: fold_0
 
 seed: 42
@@ -27,12 +27,12 @@ downsample_rate: 2
 upsample_rate: 1
 
 trainer:
-  epochs: 120
+  epochs: 90
   accelerator: auto
   use_amp: true
   debug: false
-  gradient_clip_val: 1.5
-  accumulate_grad_batches: 2
+  gradient_clip_val: 1
+  accumulate_grad_batches: 1
   monitor: val_score
   monitor_mode: max
   check_val_every_n_epoch: 1
