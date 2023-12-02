@@ -14,8 +14,8 @@ defaults:
   - dir: local
   - dataset: seg
   - model: Spec2DCNN
-  - feature_extractor: PANNsFeatureExtractor
-  - decoder: LSTMDecoder
+  - feature_extractor: LSTMFeatureExtractor
+  - decoder: UNet1DDecoder
 
 exp_name: dummy
 phase: test
