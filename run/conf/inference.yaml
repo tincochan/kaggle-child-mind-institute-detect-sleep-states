@@ -27,7 +27,7 @@ seed: 42
 duration: 5760 # durationは32の倍数
 downsample_rate: 2 # durationをdownsample_rateで割った値がnum_framesになる
 upsample_rate: 1
-batch_size: 32
+batch_size: 6
 num_workers: 2
 use_amp: true
 
@@ -41,7 +41,7 @@ aug:
 # post_process
 pp:
   score_th: 0.02
-  distance: 10
+  distance: 8
 
 # label
 labels:
