@@ -27,7 +27,7 @@ downsample_rate: 2
 upsample_rate: 1
 
 trainer:
-  epochs: 90
+  epochs: 100
   accelerator: auto
   use_amp: true
   debug: false
@@ -70,7 +70,7 @@ features:
 
 # optimizer
 optimizer:
-  lr: 0.0002
+  lr: 0.00018
 
 # scheduler
 scheduler:
